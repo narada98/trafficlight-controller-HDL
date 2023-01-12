@@ -3,14 +3,18 @@
 module WalkRegister(
     input WR_Sync,
     input WR_Reset,
-    input clk,
     output reg WR
     );
     
  //posedge WR_Sync ,posedge WR_Reset   
-	 always@(posedge clk) begin
-		if (WR_Sync) WR = 1;
-		if (WR_Reset) WR = 0;
+	 always@(posedge WR_Sync ,posedge WR_Reset) begin
+		if (WR_Sync)begin
+		 WR = 1;
+		 end
+		else begin 
+		if (WR_Reset) begin WR = 0;
+		end
+		end
 	 end
 	
 	 
