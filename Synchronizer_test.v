@@ -37,7 +37,7 @@ module Synchronizer_test;
 
 		#10;
 		
-      Reset = 1;
+      		Reset = 1;
 		Sensor = 0;
 		Walk_Request = 0;
 		Reprogram = 1;
