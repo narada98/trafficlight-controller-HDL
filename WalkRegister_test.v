@@ -5,7 +5,6 @@ module WalkRegister_test;
 	// Inputs
 	reg WR_Sync;
 	reg WR_Reset;
-    reg clk;
 	// Outputs
 	wire WR;
 
@@ -13,8 +12,7 @@ module WalkRegister_test;
 	WalkRegister uut (
 		.WR_Sync(WR_Sync), 
 		.WR_Reset(WR_Reset),
-		.WR(WR),
-		.clk(clk)
+		.WR(WR)
 	);
 
 	initial begin
@@ -22,20 +20,16 @@ module WalkRegister_test;
 		WR_Sync = 0;
 		WR_Reset = 0;
 
-		#100;
+		#10;
       WR_Sync = 1;
 		#10;
 		WR_Sync = 0;
-		#500;
+		#20;
 		WR_Reset = 1;
+		#5
+		WR_Reset = 0;
 
 	end
-	initial begin
-        clk = 0;
-        forever begin
-         #5 clk = ~clk;
-        end 
-    end	
 
       
 endmodule

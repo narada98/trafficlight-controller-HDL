@@ -32,10 +32,8 @@ module Timer_test;
 		#5;
       Value=4'b0110;
 		start_timer=1;
-		Reset_Sync = 1;
 		#5;
 		start_timer=0;
-		Reset_Sync = 0;
 		#30;
 
 		

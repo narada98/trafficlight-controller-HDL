@@ -28,21 +28,24 @@ module TimeParameter_test;
 		Selector = 2'b00;
 		Time_value = 4'b0000;
 		Prog_Sync = 0;
+		// send tBase
 		interval = 2'b00;
 		
 		#10;
-       Selector = 2'b00; 
+		//send tEXT
 		 interval = 2'b01;
 
+        //change tBase to 10
 		#10;
+		 Time_value = 4'b1010;
 		 Selector = 2'b01;
-		 interval =2'b00;
 		 
 		#5
-		
-		Time_value = 4'b1010;
-		#2
 		Prog_Sync = 1;
+		
+		// check tBase
+        #5
+        interval = 2'b00;
 
 	end
 	

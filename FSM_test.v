@@ -79,13 +79,13 @@ module FSM_test;
 		
 		// Test Walk request
 		
-		Sensor_Sync = 0;
-		WR = 0;
+//		Sensor_Sync = 1;
+		WR = 1;
 		expired = 0;
 		Prog_Sync = 0;
 		Reset_Sync = 0;
 		#5
-//		Sensor_Sync = 1;
+		Sensor_Sync = 1;
 		Reset_Sync = 1;
 
 		#5
@@ -99,7 +99,7 @@ module FSM_test;
 		#5
 		expired = 0;
 		#5
-//		WR = 1;
+		WR = 0;
 		expired = 1;
 		Sensor_Sync = 1;
 		#5
