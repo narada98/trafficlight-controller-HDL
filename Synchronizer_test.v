@@ -43,10 +43,10 @@ module Synchronizer_test;
 		Reprogram = 1;
 		
 		#7;
-		  Reset = 0;
-          Sensor = 1;
-          Walk_Request = 1;
-          Reprogram = 0;
+		Reset = 0;
+          	Sensor = 1;
+          	Walk_Request = 1;
+          	Reprogram = 0;
 
 	end
 	
