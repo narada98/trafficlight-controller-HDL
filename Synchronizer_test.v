@@ -15,7 +15,7 @@ module Synchronizer_test;
 	wire Sensor_Sync;
 	wire Reset_Sync;
 
-	// Instantiate the Unit Under Test (UUT)
+
 	Synchronizer uut (
 		.Reset(Reset), 
 		.Sensor(Sensor), 
@@ -29,13 +29,12 @@ module Synchronizer_test;
 	);
 
 	initial begin
-		// Initialize Inputs
+
 		Reset = 0;
 		Sensor = 0;
 		Walk_Request = 0;
 		Reprogram = 0;
 
-		// Wait 100 ns for global reset to finish
 		#100;
 		
       Reset = 1;

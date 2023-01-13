@@ -9,7 +9,7 @@ module WalkRegister_test;
 	// Outputs
 	wire WR;
 
-	// Instantiate the Unit Under Test (UUT)
+
 	WalkRegister uut (
 		.WR_Sync(WR_Sync), 
 		.WR_Reset(WR_Reset),
@@ -18,12 +18,10 @@ module WalkRegister_test;
 	);
 
 	initial begin
-		// Initialize Inputs
+
 		WR_Sync = 0;
 		WR_Reset = 0;
 
-
-		// Wait 100 ns for global reset to finish
 		#100;
       WR_Sync = 1;
 		#10;

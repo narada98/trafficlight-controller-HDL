@@ -18,7 +18,7 @@ module FSM_test;
 	wire [1:0] interval;
 	wire start_timer;
 	
-	// Instantiate the Unit Under Test (UUT)
+
 	FSM uut (
 		.Sensor_Sync(Sensor_Sync), 
 		.WR(WR), 
@@ -33,7 +33,7 @@ module FSM_test;
 	);
 
 	initial begin
-		// Initialize Inputs
+
 		
 		// Normal operation
 		/*Sensor_Sync = 0;
@@ -120,7 +120,7 @@ module FSM_test;
 		expired = 1;
 		#5;
 		expired = 0;
-		// Add stimulus here
+
 
 	end
 	
